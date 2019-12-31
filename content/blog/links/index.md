@@ -8,3 +8,4 @@ description: "links"
 
 ## markdown
 * [markdown](https://guides.github.com/features/mastering-markdown/)
+* [markdown2](https://wikidocs.net/1678)

@@ -23,6 +23,16 @@ SecurityContextRepository: Security를 저장하는 역할을 담당한다. sess
 1. sessionCreationPolicy 가 stateless일 경우 - NullSecurityContextRepository
 2. 그외 HttpSessionSecurityContextRepository를 사용
 
+## 추상적 흐름(Security context)
+
+SecurityContextPersistenceFilter -> SecurityContext 작업 -> SessionManagementFilter
+
+1. 요청에 대한 Seucrity Context를 로드한다.
+2. 인증을 통해서 Context를 작업한다.
+3. 해당 요청에 Security Context가 존재하지 않는다면 세션인증전략을 진행하고 Security를 저장한다.
+4. 3.에서 요청에 context가 존재하여 진행되지 않았다면 해당 context를 다음 요청을 위해 저장한다.
+
+
 ## 참조
 [baeldung](https://www.baeldung.com/spring-security-session)
  
