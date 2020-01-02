@@ -12,166 +12,23 @@ description: "links"
 2. 1만 따로 빼냄: 2~n 조각은 애초에 1~n까지의 합을 구한다는 원래의 문제와 다른 형태이므로 재귀로 사용 x
 **기저사례**: 더이상 쪼개지지 않는 최소한의 작업 (존재하는 모든 입력이 항상 **기저사례**의 답을 이용할 수 있어야한다.)
 
-[BOGGLE](https://algospot.com/judge/problem/read/BOGGLE)
+### 접근방법
+1. 최대 입력의 크기를 가늠하여 시간안에 도출할 수 있는지 예상
+2. 가능한 모든 답의 후보를 만드는 과정을 여러 개의 선택으로 나눈 뒤, 각 선택은 답의 후보를 만드는 과정의 한조각이 된다.
+3. 한 조각을 택해 답의 일부를 만들고, 나머지는 답을 재귀호출을 통해 완성
+4. 조각이 하나 이하로 남은 경우에 답을 생성했으므로, 이것을 기저사례로 선택해 처리
 
-## 전
-```{.java}
-import java.io.*;
-import java.util.stream.IntStream;
+### 이론적 배경
+* 문제와 부분문제의 정의
+> 문제: 주어진 자연수 정렬
 
-public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("test.txt")));
-        String testcase = br.readLine();
+> 문제: {4,2,50,2} 정렬
 
-        for( int i =0 ; i < Integer.valueOf(testcase) ; i++) {
-            char[][] arr = new char[5][5];
-            for( int j =0 ; j < 5 ; j++) {
-                arr[j] = br.readLine().toCharArray();
-            }
-            int num = Integer.valueOf(br.readLine());
-            for( int k = 0 ; k < num; k++) {
-                char[] word = br.readLine().toCharArray();
-                boolean find = false;
-                int y = -1, x = 0;
-                for(int z = 0 ; z < 25; z++) {
-                    if( z % 5 == 0) {
-                        y++;
-                        x=0;
-                    } else {
-                        x++;
-                    }
-                    if( findWord(arr, y,x,word)) {
-                        System.out.println(new String(word)+ " " + "YES");
-                        find = true;
-                        break;
-                    }
-                }
-                if( !find) {
-                    System.out.println(new String(word)+ " " + "NO");
-                }
+> 둘은 다른문제임. 전자는 입력을 정의하지 않은 반면, 후자는 특정한 입력을 지정하였기 때문
 
-            }
-        }
-
-    }
-
-    private static boolean findWord(char[][] arr, int y, int x , char[] word) {
-        if( word.length == 1) {
-            if( arr[y][x] == word[0]) return true;
-            else return false;
-        }
-        if( arr[y][x] == word[0]) {
-            int yy = y-2, xx = x-1;
-            for( int kk =0 ; kk < 9 ; kk++) {
-                if( kk % 3 == 0) {
-                    yy++;
-                    xx = x-1;
-                } else {
-                    xx++;
-                }
-                if( kk == 4) continue;
-                if( yy >=0 && yy<5&&xx >=0 && xx<5) {
-                    if( findWord(arr,yy,xx,new String(word).substring(1).toCharArray())) {
-                        return true;
-                    }
-                }
-            }
-
-        }
-        return false;
-    }
-}
-```
-
-## 해결
-```{.java}
-package algospot.boggle;
-
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
-
-public class Main {
-    static char[][] arr;
-    static int[][] directions = {
-            {-1,-1},
-            {-1,0},
-            {-1,1},
-            {0,-1},
-            {0,1},
-            {1,-1},
-            {1,0},
-            {1,1}
-    };
-    static int[][][] cache ;
-    public static void main(String[] args) throws IOException {
-
-//        BufferedReader br = new BufferedReader((new InputStreamReader(new FileInputStream("algospot/boggle/test.txt"))));
-        BufferedReader br = new BufferedReader((new InputStreamReader(System.in)));
-        int tc = Integer.valueOf(br.readLine());
-        for( int i = 0 ; i < tc ; i++) {
-            arr = new char[5][5];
-            arr[0] = br.readLine().toCharArray();
-            arr[1] = br.readLine().toCharArray();
-            arr[2] = br.readLine().toCharArray();
-            arr[3] = br.readLine().toCharArray();
-            arr[4] = br.readLine().toCharArray();
+> 문제란 수행해야 할 작업과 그 작업을 적용할 자료의 조합을 뜻한다.
 
 
-            int wordNum = Integer.valueOf(br.readLine());
 
-            for( int j = 0 ; j < wordNum ; j++) {
-                cache = new int[5][5][10];
-                String word = br.readLine();
-                if( findWord(word)) {
-                    System.out.println(String.format("%s %s",word,"YES"));
-                } else {
-                    System.out.println(String.format("%s %s",word,"NO"));
-                }
-            }
-        }
 
-    }
-
-    public static boolean findWord(String word) {
-        return IntStream
-                .range(0,25)
-                .anyMatch(i->{
-                    int y = i / 5;
-                    int x = i % 5;
-                    return findWord(y,x,word.toCharArray());
-                });
-    }
-
-    public static boolean findWord(int y, int x , char[] word) {
-        if( cache[y][x][word.length-1] == 1) {
-            return true;
-        } else if( cache[y][x][word.length-1] == -1) {
-            return false;
-        }
-        if(word.length == 1 ) {
-            return word[0] == arr[y][x];
-        }
-
-        if( word[0] == arr[y][x]) {
-            boolean res = Stream.of(directions)
-                    .anyMatch(i->{
-                        int yy = y + i[0];
-                        int xx = x + i[1];
-                        if( yy >= 0 && yy < 5 && xx >=0 && xx < 5) return findWord(yy,xx,new String(word).substring(1).toCharArray());
-                        return false;
-                    });
-            if(res) cache[y][x][word.length-1]= 1;
-            else cache[y][x][word.length-1] = -1;
-            return res;
-        }
-
-        return false;
-    }
-}
-```
 
