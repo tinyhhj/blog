@@ -175,8 +175,37 @@ AspectJ 표현식의 대상을 표현하는데 다양한 방법이 있다.
 4. 어드바이저
 
 
+## 트랜잭션
 
+### 전파
+1. PROPAGATION_REQUIRED: 진행중인 트랜잭션이 있으면 참여하고 없으면 새로 시작한다. 
+2. PROPAGATION_REQUIRES_NEW: 항상 새로운 트랜잭션 시작
+3. PROPAGATION_NOT_SUPPORTED: 진행중인 트랜잭션에 관계없이 트랜잭션 없이 동작(aop 포인트컷 대상을 추출해내기 힘들때 모두 트랜잭션 적용 후, 따로 처리하는 방식)
 
+### 격리수준
+1. ISOLATION_DEFAULT: Datasource의 설정되어 있는 격리수준을 그대로 따른다.
 
+### 제한시간
+### 읽기전용
 
+### transactionInterceptor
+
+```
+예외처리: 스프링의 기본적인 예외처리 원칙은 비지니스적인 의미가 있는 경우에 체크예외를 사용하고, 그 외의 복구 불가능한 순수한 예외의 경우는 런타임 예외로 포장해서 전달한다.
+```
+
+트랜잭션의 속성들을 메소드 패턴에 따라 다르게 지정할 수 있다.
+스프링의 기본적인 예외처리를 따르지 않을경우에 `transactionAttribute의 rollbackOn`을 이용할 수 있다.
+
+### 적용순서
+
+1. 포인트컷에 의해서 트랜잭션 적용 대상들을 결정한다(타입패턴이나 빈이름을 이용)
+2. 상세 메소드는 transactionInterceptor의 transactionAttribute를 이용해서 트랜잭션 속성을 메소드 패턴에 맞게 결정한다.
+
+### @Transactional
+
+1. @Transactional 어노테이션을 속성정보로 사용하도록 지정하면 @Transactional이 부여된 모든 오브젝트를 자동으로 타겟으로 인식한다.
+이때 사용되는 포인트컷은 `TransactionAttributeSourcePointcut`이다.
+2. 대체정책: 클래스 메소드 -> 클래스 -> 인터페이스 메소드 -> 인터페이스 순으로 트랜잭션 속성을 참조한다.
+3. @Transactional의 위치는 인터페이스를 사용하는 프록시 방식의 aop가 아닌경우에, 무시될 수 있으므로 `타겟 클래스에 적용`할 것을 권장한다.
 

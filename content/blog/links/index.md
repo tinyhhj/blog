@@ -25,3 +25,11 @@ description: "links"
 * [REMOVING UNWANTED OBJECTS FROM AN IMAGE USING IMAGE INPAINTING](http://ijariie.com/AdminUploadPdf/REMOVING_UNWANTED_OBJECTS_FROM_AN_IMAGE_USING_IMAGE_INPAINTING_ijariie1330_volume_1_14_page_443_447.pdf)
 * [An efficient forgery detection algorithm for object removal by exemplar-based image inpainting](https://www.sciencedirect.com/science/article/pii/S1047320315000541)
 * [General Deep Image Completion with Lightweight Conditional Generative Adversarial Networks](http://www.bmva.org/bmvc/2017/papers/paper080/paper080.pdf)
+* [PatchMatch](https://gfx.cs.princeton.edu/pubs/Barnes_2009_PAR/)
+* [space-time-completion](http://www.wisdom.weizmann.ac.il/~vision/VideoCompletion/SpaceTimeCompletion.pdf)
+* [image-resizing-retargeting](https://www.cs.purdue.edu/homes/aliaga/cs535-14/lec-image-resizing.pdf)
+## python
+* [wikidocs](https://wikidocs.net/book/1553)
+
+## tip
+* [continueLabel](https://stackoverflow.com/questions/1859072/python-continuing-to-next-iteration-in-outer-loop)
