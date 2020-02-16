@@ -1,7 +1,7 @@
 ---
-title: "[gcj2019-qr1]Foregone Solution"
+title: "[python]deep-learning-1"
 date: "2020-01-28T15:32:32.542Z"
-description: "machine-learning"
+description: "deep-learning"
 ---
 
 ## [deep-learning-from-scratch](https://github.com/WegraLee/deep-learning-from-scratch)

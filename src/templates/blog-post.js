@@ -5,6 +5,8 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import katex from 'katex';
+
 
 class BlogPostTemplate extends React.Component {
   render() {
