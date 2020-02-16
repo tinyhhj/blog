@@ -11,6 +11,7 @@ keyword-only 변수를 편하게 사용하기 위해서 고안된 듯 싶습니�
 ### 변경 
 1. 가변 변수 이후에 단독으로 키워드 변수가 존재할 수 있습니다.
 2. 일반 변수와 키워드 변수를 구분하기 위해 경계선(*)를 사용할 수 있습니다. 
+```{.python}
     def func(a,b,*,key='key'):
     pass
     #ok
@@ -19,7 +20,7 @@ keyword-only 변수를 편하게 사용하기 위해서 고안된 듯 싶습니�
     func('aa','aa',key='dd')
     #error positional argument only 2
     func('aa','bb','cc',key='ddd')
-
+```
 
 ### reference
 [stackoverflow](https://stackoverflow.com/questions/53797057/star-as-an-argument-in-python-function)
