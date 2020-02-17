@@ -23,6 +23,6 @@ keyword-only 변수를 편하게 사용하기 위해서 고안된 듯 싶습니�
 ```
 
 ### reference
-[stackoverflow](https://stackoverflow.com/questions/53797057/star-as-an-argument-in-python-function)
-[PEP 3102](https://www.python.org/dev/peps/pep-3102/)
+* [stackoverflow](https://stackoverflow.com/questions/53797057/star-as-an-argument-in-python-function)
+* [PEP 3102](https://www.python.org/dev/peps/pep-3102/)
 
