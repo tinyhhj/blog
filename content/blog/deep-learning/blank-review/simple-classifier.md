@@ -4,12 +4,13 @@ date: "2020-02-23T17:38:22.921Z"
 description: "deep-learning"
 ---
 
-## Simple-classifier    
+## Simple-classifier
 
-### 문제  
+### 문제
+
 1. fashion mnist 구분하기
 
-```{.python}
+```python
 import torch
 import torchvision
 import matplotlib.pyplot as plt
@@ -134,4 +135,5 @@ for e in range(epochs):
 ```
 
 ### reference
-* [펭귄브로의 3분 딥러닝, 파이토치맛](http://www.hanbit.co.kr/store/books/look.php?p_code=B7193109877)
+
+- [펭귄브로의 3분 딥러닝, 파이토치맛](http://www.hanbit.co.kr/store/books/look.php?p_code=B7193109877)

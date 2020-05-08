@@ -12,7 +12,7 @@ description: "algorithm"
 > 숫자가 크기때문에 스트링으로 출력
 > 숫자형태로 만들기 위해서 앞의 0은 제거
 
-```{.java}
+```java
 package codejam.qr2019.q1;
 
 import java.io.BufferedReader;

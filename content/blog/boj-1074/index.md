@@ -17,7 +17,7 @@ description: "algorithm"
 > 3구역이라면 2구역 까지 갯수 + 3구역 내에서 순서
 > 4구역이라면 3구역 까지 갯수 + 4구역 내에서 순서
 
-```{.java}
+```java
 static int getZOrder(int n , int r , int c) {
         if( n == 0) {
             return 1;

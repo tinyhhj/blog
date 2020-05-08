@@ -8,7 +8,7 @@ description: "deep-learning"
 
 ### chap 3
 
-```{.python}
+```python
 '''
 신경망
 데이터로부터 가중치 매개변수의 적절한 값을 자동으로 학습하는 능력이 신경망의 중요한 성질입니다.

@@ -8,7 +8,7 @@ description: "algorithm"
 
 ## 재귀 호출
 
-```{.java}
+```java
 package algospot.tsp1;
 
 import java.io.FileInputStream;

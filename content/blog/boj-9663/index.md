@@ -8,7 +8,7 @@ description: "algorithm"
 
 ## backtracking
 
-```{.java}
+```java
 package boj;
 
 import java.io.BufferedReader;

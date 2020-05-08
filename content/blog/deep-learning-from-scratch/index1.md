@@ -8,7 +8,7 @@ description: "deep-learning"
 
 ### chap 1
 
-```{.python}
+```python
 # numpy
 import numpy as np
 

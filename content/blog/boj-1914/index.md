@@ -8,7 +8,7 @@ description: "algorithm"
 
 ## 재귀호출
 
-```{.java}
+```java
 public class Boj1914 {
     int res;
 

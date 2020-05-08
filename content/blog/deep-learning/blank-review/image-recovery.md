@@ -4,23 +4,25 @@ date: "2020-02-16T15:29:48.309Z"
 description: "deep-learning"
 ---
 
-## Image-recovery  
+## Image-recovery
+
 이 내용은 [펭귄브로의 3분 딥러닝, 파이토치맛](http://www.hanbit.co.kr/store/books/look.php?p_code=B7193109877)의 3장 내용을 복습한 예제입니다.
 
-### 문제  
+### 문제
+
 weired_function을 통해 나온 손상된 이미지를 원래대로 복구할 수 있는 방법?
+
 1. 일반적 접근
-    1. weired_function 원리 이해
-    2. weired_function를 복구할 수 있는 함수 작성
-    3. 이미지 복구
+   1. weired_function 원리 이해
+   2. weired_function를 복구할 수 있는 함수 작성
+   3. 이미지 복구
 2. 머신러닝 접근
-    1. 손상된 이미지와 같은 사이즈의 랜덤 이미지를 weired_function에 입력
-    2. 1.의 출력된 결과와 손상된 이미지 차이 비교 
-    3. 손상된 이미지와 같게끔 랜덤 이미지 입력값 조정 
-    4. 최종적으로 손상된 이미지가 나온 랜덤 이미지를 찾았다면 이미지 복구
+   1. 손상된 이미지와 같은 사이즈의 랜덤 이미지를 weired_function에 입력
+   2. 1.의 출력된 결과와 손상된 이미지 차이 비교
+   3. 손상된 이미지와 같게끔 랜덤 이미지 입력값 조정
+   4. 최종적으로 손상된 이미지가 나온 랜덤 이미지를 찾았다면 이미지 복구
 
-
-```{.python}
+```python
 import torch
 import pickle
 import matplotlib.pyplot as plt

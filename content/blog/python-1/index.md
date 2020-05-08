@@ -1,7 +1,7 @@
 ---
 title: "[python]연습"
 date: "2020-01-19T16:21:36.940Z"
-description: "machine learning & image process"
+description: "language"
 ---
 
 ```python

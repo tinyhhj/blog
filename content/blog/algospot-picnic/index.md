@@ -8,7 +8,7 @@ description: "algorithm"
 
 ## 재귀호출
 
-```{.java}
+```java
 package algospot.picnic;
 
 import java.io.File;

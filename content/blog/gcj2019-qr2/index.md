@@ -8,7 +8,7 @@ description: "algorithm"
 
 ## backtracking
 
-```{.ja]va}
+```java
 package codejam.qr2019.q2;
 
 import java.io.BufferedReader;

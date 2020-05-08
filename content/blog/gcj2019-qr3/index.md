@@ -10,7 +10,7 @@ description: "algorithm"
 
 이 문제를 해결하는데 엄청나게 시간을 낭비했다.
 
-풀이 1: 인접한 두 수의 최대 공약수 구하기(a * b = c, b * d = e 일때 c,e 의 최대 공약수는 b이다.)
+풀이 1: 인접한 두 수의 최대 공약수 구하기(a _ b = c, b _ d = e 일때 c,e 의 최대 공약수는 b이다.)
 
 접근 1으로 풀었을 때, 이 문제의 함정을 조심해야한다.
 
@@ -18,10 +18,9 @@ description: "algorithm"
 즉, 최대공약수를 통해서 소수를 유추해내려면 적어도 2쌍의 다른 소수의 곱이 필요하다 (예: AB BC => gcd = B로 유추가능, AB BA => gcd AB 유추 불가능)
 
 접근 3: 접근 2까지 했으나 visible set은 통과하나 hidden set은 통과를 못함. 결국 유투브에서 원인을 찾아낼 수 있었음
-소수의 크기가 10^100이기때문에 BigInteger를 사용해야만 했는데 시스템 입력에서 읽어올때 **BigInteger.valueOf(sc.nextInt())** 식으로 읽어오고 있던걸 **sc.nextBigInteger()**로 읽어오니까 통과함 
+소수의 크기가 10^100이기때문에 BigInteger를 사용해야만 했는데 시스템 입력에서 읽어올때 **BigInteger.valueOf(sc.nextInt())** 식으로 읽어오고 있던걸 **sc.nextBigInteger()**로 읽어오니까 통과함
 
-
-```{.java}
+```java
 package codejam.qr2019.q3;
 
 import java.io.BufferedReader;

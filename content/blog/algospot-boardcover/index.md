@@ -8,7 +8,7 @@ description: "algorithm"
 
 ## 재귀호출
 
-```{.java}
+```java
 public class Main {
 
     private static char[][][] block = new char[][][] {

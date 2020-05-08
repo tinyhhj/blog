@@ -6,7 +6,7 @@ description: "language"
 
 ## [relative import](https://github.com/tinyhhj/algorithm/tree/master/src/python/relative_import)
 
-```{.python}
+```python
 print('__name__',__name__,'__package__',__package__)
 
 # https://stackoverflow.com/questions/14132789/relative-imports-for-the-billionth-time/14132912#14132912
@@ -48,4 +48,4 @@ msg('package_A.package_AA.AA')
 
 ### reference
 
-* [stackoverflow](https://stackoverflow.com/questions/14132789/relative-imports-for-the-billionth-time/14132912#14132912)
+- [stackoverflow](https://stackoverflow.com/questions/14132789/relative-imports-for-the-billionth-time/14132912#14132912)

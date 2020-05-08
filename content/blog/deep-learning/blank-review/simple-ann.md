@@ -4,14 +4,15 @@ date: "2020-02-18T16:49:26.007Z"
 description: "deep-learning"
 ---
 
-## Simple-ann  
+## Simple-ann
+
 이 내용은 [펭귄브로의 3분 딥러닝, 파이토치맛](http://www.hanbit.co.kr/store/books/look.php?p_code=B7193109877)의 3장 내용을 복습한 예제입니다.
 
-### 문제  
+### 문제
+
 1. 정답이 0과 1인 데이터 구분하기
 
-
-```{.python}
+```python
 import torch
 import numpy as np
 from sklearn.datasets import make_blobs

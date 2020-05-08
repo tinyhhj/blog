@@ -1,0 +1,8 @@
+a.icon-link {
+  color: #343a40;
+  text-decoration: none;
+  box-shadow: none;
+}
+a:hover {
+  opacity: 0.6;
+}
