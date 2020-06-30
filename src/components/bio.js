@@ -30,7 +30,7 @@ const Bio = () => {
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author, _ } = data.site.siteMetadata
   return (
     <div
       style={{
@@ -57,6 +57,7 @@ const Bio = () => {
           className={"icon-link"}
           href="https://github.com/tinyhhj"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <strong>{author}</strong>
         </a>

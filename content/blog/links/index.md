@@ -54,3 +54,8 @@ description: "links"
 - [모두를위한 딥러닝](https://hunkim.github.io/ml/)
 - [cs231n](http://cs231n.stanford.edu/index.html)
 - [deeplearningbook](http://www.deeplearningbook.org/)
+
+## crontab
+
+- [1](https://serverfault.com/questions/449651/why-is-my-crontab-not-working-and-how-can-i-troubleshoot-it)
+- [2](https://nahosung.tistory.com/95)
