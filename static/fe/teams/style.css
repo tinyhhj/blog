@@ -11,10 +11,11 @@ ul {
 }
 
 .wrapper {
-  position: absolute;
   left: 0;
   right: 0;
   height: 100vh;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .team {
