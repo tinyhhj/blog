@@ -1,0 +1,72 @@
+:root {
+  line-height: 1.5;
+  font-family: "arial";
+}
+
+body,
+p,
+img {
+  margin: 0;
+}
+img {
+  vertical-align: top;
+  width: 100%;
+}
+
+h1 {
+  font: inherit;
+  margin: 0;
+}
+
+.container {
+  background-color: purple;
+  color: white;
+  margin: 100px auto;
+  display: table;
+}
+
+.cover {
+  display: table-cell;
+  width: 60%;
+}
+.content {
+  display: table-cell;
+
+  width: 40%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 40px;
+}
+.content span,
+.content p {
+  opacity: 0.8;
+}
+
+.content h1 {
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 720px) {
+  .container {
+    margin: 0;
+    position: relative;
+  }
+  .container,
+  .cover,
+  .content {
+    display: block;
+    width: auto;
+  }
+  .content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: inherit;
+    max-width: 400px;
+    margin: 30px;
+    padding: 30px;
+    text-align: right;
+  }
+}

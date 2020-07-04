@@ -8,6 +8,9 @@ class Layout extends React.Component {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
+    const mainStyle = {
+      marginBottom: "40px",
+    }
 
     if (location.pathname === rootPath) {
       header = (
@@ -61,11 +64,11 @@ class Layout extends React.Component {
         }}
       >
         <header>{header}</header>
-        <main>{children}</main>
+        <main style={mainStyle}>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://tinyhhj.github.io">tinyhhj</a>
         </footer>
       </div>
     )
