@@ -46,6 +46,9 @@ description: "links"
 - [poiemaweb](https://poiemaweb.com/)
 - [css-trick](https://css-tricks.com/)
 
+## vscode
+- [prettier&eslint](https://glebbahmutov.com/blog/configure-prettier-in-vscode/#use-eslint-with-prettier)
+
 ## deeplearning
 
 - [matplotlib](https://colab.research.google.com/github/ageron/handson-ml2/blob/master/tools_matplotlib.ipynb)

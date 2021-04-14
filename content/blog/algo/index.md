@@ -37,11 +37,11 @@ description: "links"
 3. 더이상 답을 분할하지 않고 푼다.(기저조건)
 
 
-
-## todo
-* 순열 구현하기
-* 조합 구현하기
-* 2^n가지 경우의 수 만들기
+## 큐
+1. [remove-duplicate-letters](https://leetcode.com/problems/remove-duplicate-letters/)
+2. [find-k-pairs-with-smallest-sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)
+3. [longest-increasing-subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+4. [week-2-april-8th-april-14th/3706](https://leetcode.com/explore/challenge/card/april-leetcoding-challenge-2021/594/week-2-april-8th-april-14th/3706/)
 
 
 
