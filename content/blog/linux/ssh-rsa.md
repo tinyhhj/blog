@@ -9,4 +9,4 @@ description: "linux"
 1. ssh-keygen -t rsa 로 rsa키 생성
 2. 세이브 위치로 가서(디폴트: ~/.ssh) id_rsa.pub 내용 복사
 3. 리모트 서버에 접속 후, .ssh/authorized_keys에 등록
-    echo '{id_rsa.pub내용}' >> .ssh/authorized_keys 
+   echo '{id_rsa.pub내용}' >> .ssh/authorized_keys

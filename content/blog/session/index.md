@@ -15,7 +15,7 @@ description: "work"
 
 해당 부분은 SecurityContext를 위해서 세션을 체크하는것이므로, 세션 invalidate 대신, SecurityContextHolder.clearContext()로 수정하였다.
 
-## 구조 
+## 구조
 
 SecurityContextPersistenceFilter: SecurityContextRepository를 이용해서 SecurityContext를 요청시에 load하거나 save한다.
 SecurityContextRepository: Security를 저장하는 역할을 담당한다. sessionCreationPolicy에 따라 해당 전략을 변경한다.
@@ -32,7 +32,6 @@ SecurityContextPersistenceFilter -> SecurityContext 작업 -> SessionManagementF
 3. 해당 요청에 Security Context가 존재하지 않는다면 세션인증전략을 진행하고 Security를 저장한다.
 4. 3.에서 요청에 context가 존재하여 진행되지 않았다면 해당 context를 다음 요청을 위해 저장한다.
 
-
 ## 참조
+
 [baeldung](https://www.baeldung.com/spring-security-session)
- 

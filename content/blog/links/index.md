@@ -47,6 +47,7 @@ description: "links"
 - [css-trick](https://css-tricks.com/)
 
 ## vscode
+
 - [prettier&eslint](https://glebbahmutov.com/blog/configure-prettier-in-vscode/#use-eslint-with-prettier)
 
 ## deeplearning
