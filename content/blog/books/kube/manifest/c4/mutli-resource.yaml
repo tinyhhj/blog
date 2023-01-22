@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-deployment
+  annotations:
+    key1: "value1"
+spec: 
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sample-app
+  template:
+    metadata:
+      labels:
+        app: sample-app
+      annotations:
+        key2: value2
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx:1.16
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  name: smaple-service
+spec:
+  type: LoadBalancer
+  ports:
+    - name: "http"
+      protocol: "TCP"
+      port: 8080
+      targetPort: 80
+  selector:
+    app: sample-app
