@@ -5,8 +5,8 @@ metadata:
 spec:
   hostNetwork: true
   containers:
-    - name: nginx-container
-      image: nginx:1.16
+    - name: hello-world
+      image: hello-world
       ports:
         - containerPort: 8080
       env:
